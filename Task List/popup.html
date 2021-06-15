@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            To-Due List
+        </title>
+        
+        <!--link other files-->
+        <script src="popup.js"></script>
+        <link rel="stylesheet" href="popup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <main>
+            <!--buttons for functions-->
+            <button id="notif" class="circle" title="Notifications"><i class="fa fa-bell-o"></i></button>
+            <button id="mute" class="circle" title="Mute"><i class="fa fa-volume-up"></i></button>
+            <button id="mode" class="circle" title="Light Mode"><i class="fa fa-moon-o"></i></button>
+            <button id="sort" class="circle" title="Sort by Date"><i class="fa fa-exchange fa-rotate-90"></i></button>
+            <button id="create" class="circle" title="New Task">+</button>
+            
+            <!--extension content-->
+            <input id="title" maxlength="48" placeholder="List Title" type="text" autocomplete="off" value="To-Due List">
+            
+            <button class="accordion">Ongoing</button>
+            <table id="ongoing"></table>
+            
+            <button class="accordion">Completed</button>
+            <table id="complete"></table>
+            
+            <!--overlay for notification preferences-->
+            <div class="overlay" id="pickNotifs">
+                <form class="overlay-content" id="form">
+                    <input type="checkbox" id="5min" value="5" class="prefire">
+                    <label for="5min">5 minutes</label>
+                    <input type="checkbox" id="10min" value="10" class="prefire">
+                    <label for="10min">10 minutes</label>
+                    <input type="checkbox" id="15min" value="15" class="prefire">
+                    <label for="15min">15 minutes</label>
+                    <input type="checkbox" id="20min" value="20" class="prefire">
+                    <label for="20min">20 minutes</label>
+                    <input type="checkbox" id="30min" value="30" class="prefire">
+                    <label for="30min">30 minutes</label>
+                    <input type="checkbox" id="60min" value="60" class="prefire">
+                    <label for="60min">1 hour</label>
+                    
+                    <input type="submit" id="submit" value="Save">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

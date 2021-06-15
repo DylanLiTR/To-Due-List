@@ -1,0 +1,260 @@
+/* fresh start */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* general styles */
+body {
+    width: 757px;
+    background-color: #212121;
+    color: #E0E0E0;
+    font-size: 16px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1px;
+    background-color: #424242;
+    float: left;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+tr, input, select {
+    background-color: #424242;
+    color: #E0E0E0;
+    font-size: 16px;
+}
+
+td {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: transparent;
+}
+
+img {
+    width: 16px;
+    height: 16px;
+    margin: none;
+    padding: none;
+    left: 0;
+}
+
+select {
+    width: 48px;
+    margin-left: 6px;
+}
+
+select.month {
+    width: 54px;
+}
+
+input, select {
+    border: none;
+    height: 36px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    width: 296px;
+    padding: 3px 12px;
+}
+
+input[type="date"] {
+    font-family: "Arial";
+    padding-left: 4px;
+    width: 144px;
+}
+
+input[type="time"] {
+    font-family: "Arial";
+    padding-left: 4px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: seagreen;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin-top: 6px;
+}
+
+/* utilities */
+#title {
+    width: 100%;
+    padding: 12px 8px;
+    margin: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: #E0E0E0;
+    background-color: #303030;
+}
+
+.glow>td {
+    animation: fadeout 2.5s;
+}
+
+.delete {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.delete img {
+    width: 16px;
+    margin: none;
+}
+
+.accordion {
+    background-color: #373737;
+    color: #E0E0E0;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 16px;
+    width: 692px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.show {
+    display: block;
+}
+
+/* notification overlay styling */
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.8s;
+}
+
+.overlay-content {
+    position: relative;
+    padding: 12px 12px;
+    top: 32%;
+    text-align: center;
+    background-color: #424242;
+    font-size: 18px;
+}
+
+/* button styling */
+.circle {
+    height: 36px;
+    width: 36px;
+    font-size: 16px;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: seagreen;
+    color: #121212;
+    align-self: right;
+    box-shadow: 1px 1px 5px #222222;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#create {
+    bottom: 8px;
+    right: 14px;
+}
+#sort {
+    top: 68px;
+    right: 14px;
+}
+#notif {
+    top: 14px;
+    left: 14px;
+}
+#mute {
+    top: 14px;
+    left: 64px;
+}
+#mode {
+    top: 14px;
+    right: 14px;
+}
+
+/* light mode settings */
+.light {
+    background-color: #F4F4F4;
+    color: #121212;
+}
+
+.light #title {
+    background-color: #F2F2F2;
+    color: #121212;
+}
+
+.light tr, .light input, .light select, .light table {
+    background-color: #FFFFFF;
+    color: #121212;
+}
+
+.light input[type="submit"] {
+    background-color: seagreen;
+}
+
+.light .overlay-content {
+    background-color: #F4F4F4;
+}
+
+.light .accordion {
+    background-color: #FAFAFA;
+    color: #121212;
+}
+ 
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+@keyframes fadeout {
+  from {border-color: seagreen;}
+  to {border-color: transparent;}
+}

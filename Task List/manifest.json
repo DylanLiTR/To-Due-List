@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+
+    "name": "To-Due List",
+    "description": "A simple to-do list to organize your tasks",
+    "version": "1.0",
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/tasklist.png",
+            "32": "images/tasklist.png"
+        }
+    },
+    "icons": {
+        "16": "images/tasklist.png",
+        "32": "images/tasklist.png"
+    },
+    
+    "permissions": [
+        "storage",
+        "notifications",
+        "alarms"
+    ]
+}
